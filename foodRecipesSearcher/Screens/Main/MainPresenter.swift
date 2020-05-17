@@ -14,12 +14,9 @@ final class MainPresenterImplementation {
 }
 
 extension MainPresenterImplementation: MainPresenter {
-    func presentInitialState() {
-        output?.updateView()
-    }
-    
-    func updatePresentedState() {
-        output?.updateView()
+    func updatePresentedState(with data: [MainDataModel.Meal]) {
+        let transformedData = data.map { MainCellViewModel(from: $0)}
+        output?.updateView(with: transformedData)
     }
     func routeToDetailScreen() {}
 }

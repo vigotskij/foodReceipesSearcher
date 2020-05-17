@@ -8,10 +8,7 @@
 
 final class MainConfiguratorImplementation: MainConfigurator {
     func configure(with viewController: MainViewController) {
-        guard let mainView = viewController as? MainView else {
-            return
-        }
-        let presenter: MainPresenter = MainPresenterImplementation(output: mainView)
+        let presenter: MainPresenter = MainPresenterImplementation(output: viewController)
         let interactor: MainInteractor = MainInteractorImplementation(output: presenter)
         let router = MainRouterImplementation(viewController: viewController)
         viewController.router = router

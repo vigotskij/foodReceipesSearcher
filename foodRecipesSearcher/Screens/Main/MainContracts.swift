@@ -15,14 +15,13 @@ protocol MainRouter: Router {
 protocol MainInteractor: Interactor {
     func viewDidLoad()
     func search(with term: String)
-    func routeToDetailScreen()
+    func routeToDetailScreen(with: String)
 }
 protocol MainPresenter {
-    func presentInitialState()
-    func updatePresentedState()
+    func updatePresentedState(with data: [MainDataModel.Meal])
     func routeToDetailScreen()
 }
 protocol MainView: View {
-    func updateView()
+    func updateView(with viewModel: [MainCellViewModel])
     func routeToDetailScreen()
 }

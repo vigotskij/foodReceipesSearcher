@@ -10,6 +10,16 @@ struct MainDataModel: Decodable {
     
     struct Meal: Decodable {
         let idMeal: String
+        let mealThumbString: String?
+        let mealNameString: String?
+        let category: String?
+        
+        enum CodingKeys: String, CodingKey {
+            case idMeal
+            case mealThumbString = "strMealThumb"
+            case mealNameString = "strMeal"
+            case category = "strCategory"
+        }
     }
 }
 

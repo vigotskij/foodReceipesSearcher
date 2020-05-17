@@ -9,9 +9,13 @@ import UIKit
 final class MainViewCell: UITableViewCell {
     var viewModel: MainCellViewModel? {
         didSet {
-            title?.text = viewModel?.title
+            titleLabel?.text = viewModel?.title
+            categoryLabel?.text = viewModel?.category
+            mealThumbImageView?.image = viewModel?.compressedImage
         }
     }
     // MARK: - Outlets
-    @IBOutlet private weak var title: UILabel?
+    @IBOutlet private weak var titleLabel: UILabel?
+    @IBOutlet private weak var categoryLabel: UILabel?
+    @IBOutlet private weak var mealThumbImageView: UIImageView?
 }

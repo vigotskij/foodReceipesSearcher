@@ -26,6 +26,13 @@
 		A19F32632471E97C00853ED6 /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A19F32622471E97C00853ED6 /* MainViewCell.xib */; };
 		A19F32652471EAC200853ED6 /* URLSession+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19F32642471EAC200853ED6 /* URLSession+extension.swift */; };
 		A19F32672471ECDD00853ED6 /* MainCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19F32662471ECDD00853ED6 /* MainCellViewModel.swift */; };
+		A19F326B2472026100853ED6 /* DetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19F326A2472026100853ED6 /* DetailConfigurator.swift */; };
+		A19F326E2472027400853ED6 /* DetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19F326D2472027400853ED6 /* DetailContracts.swift */; };
+		A19F32702472028000853ED6 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19F326F2472028000853ED6 /* DetailInteractor.swift */; };
+		A19F32722472028F00853ED6 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19F32712472028F00853ED6 /* DetailPresenter.swift */; };
+		A19F32742472029E00853ED6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19F32732472029E00853ED6 /* DetailViewController.swift */; };
+		A19F3276247202B700853ED6 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A19F3275247202B700853ED6 /* DetailViewController.xib */; };
+		A19F32782472037F00853ED6 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19F32772472037F00853ED6 /* DetailRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +69,13 @@
 		A19F32622471E97C00853ED6 /* MainViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewCell.xib; sourceTree = "<group>"; };
 		A19F32642471EAC200853ED6 /* URLSession+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+extension.swift"; sourceTree = "<group>"; };
 		A19F32662471ECDD00853ED6 /* MainCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellViewModel.swift; sourceTree = "<group>"; };
+		A19F326A2472026100853ED6 /* DetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailConfigurator.swift; sourceTree = "<group>"; };
+		A19F326D2472027400853ED6 /* DetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContracts.swift; sourceTree = "<group>"; };
+		A19F326F2472028000853ED6 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		A19F32712472028F00853ED6 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		A19F32732472029E00853ED6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A19F3275247202B700853ED6 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		A19F32772472037F00853ED6 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +144,7 @@
 		A19F32482471D3E800853ED6 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				A19F32682472023C00853ED6 /* Detail */,
 				A19F324E2471D42B00853ED6 /* Main */,
 			);
 			path = Screens;
@@ -197,6 +212,20 @@
 				A19F32622471E97C00853ED6 /* MainViewCell.xib */,
 			);
 			path = MainViewCell;
+			sourceTree = "<group>";
+		};
+		A19F32682472023C00853ED6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A19F326A2472026100853ED6 /* DetailConfigurator.swift */,
+				A19F326D2472027400853ED6 /* DetailContracts.swift */,
+				A19F326F2472028000853ED6 /* DetailInteractor.swift */,
+				A19F32712472028F00853ED6 /* DetailPresenter.swift */,
+				A19F32772472037F00853ED6 /* DetailRouter.swift */,
+				A19F32732472029E00853ED6 /* DetailViewController.swift */,
+				A19F3275247202B700853ED6 /* DetailViewController.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +311,7 @@
 			files = (
 				A10258D32471D1FF00A8CF32 /* LaunchScreen.storyboard in Resources */,
 				A19F32632471E97C00853ED6 /* MainViewCell.xib in Resources */,
+				A19F3276247202B700853ED6 /* DetailViewController.xib in Resources */,
 				A10258D02471D1FF00A8CF32 /* Assets.xcassets in Resources */,
 				A10258CE2471D1F900A8CF32 /* Main.storyboard in Resources */,
 			);
@@ -305,15 +335,21 @@
 				A19F32652471EAC200853ED6 /* URLSession+extension.swift in Sources */,
 				A19F32562471D47100853ED6 /* MainRouter.swift in Sources */,
 				A19F32672471ECDD00853ED6 /* MainCellViewModel.swift in Sources */,
+				A19F326E2472027400853ED6 /* DetailContracts.swift in Sources */,
+				A19F32782472037F00853ED6 /* DetailRouter.swift in Sources */,
 				A19F325E2471E85600853ED6 /* MainDataModel.swift in Sources */,
 				A10258CB2471D1F900A8CF32 /* MainViewController.swift in Sources */,
 				A10258C72471D1F900A8CF32 /* AppDelegate.swift in Sources */,
 				A19F32582471D4E700853ED6 /* Architecture.swift in Sources */,
 				A19F325A2471E14A00853ED6 /* Constants.swift in Sources */,
+				A19F32742472029E00853ED6 /* DetailViewController.swift in Sources */,
 				A10258C92471D1F900A8CF32 /* SceneDelegate.swift in Sources */,
+				A19F32722472028F00853ED6 /* DetailPresenter.swift in Sources */,
 				A19F32502471D44D00853ED6 /* MainConfigurator.swift in Sources */,
 				A19F32612471E8B400853ED6 /* MainViewCell.swift in Sources */,
+				A19F32702472028000853ED6 /* DetailInteractor.swift in Sources */,
 				A19F32542471D46600853ED6 /* MainPresenter.swift in Sources */,
+				A19F326B2472026100853ED6 /* DetailConfigurator.swift in Sources */,
 				A19F32522471D45B00853ED6 /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

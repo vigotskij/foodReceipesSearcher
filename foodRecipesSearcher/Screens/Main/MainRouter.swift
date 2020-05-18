@@ -15,6 +15,8 @@ final class MainRouterImplementation {
 }
 extension MainRouterImplementation: MainRouter {
     func routeToDetailScreen() {
-        
+        let detailViewController = DetailViewController()
+        detailViewController.configurator = DetailConfiguratorImplementation()
+        viewController.present(detailViewController, animated: true, completion: nil)
     }
 }
